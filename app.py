@@ -9,6 +9,6 @@ def Home(name=None):
 # if __name__=="__main__":
 #     app.run()
 
-# debud mode running on 5050 port
+# debug mode running on 5050 port
 if __name__=="__main__":
     app.run(host="localhost", debug=True, port=5050)

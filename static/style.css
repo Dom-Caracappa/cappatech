@@ -1,0 +1,84 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-rows: 1fr 4fr 1fr;
+}
+.logo-container {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  height: auto;
+  width: 100%;
+}
+.CTlogo {
+  height: 8vw;
+  padding: 4vw;
+  margin-bottom: 0;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50vw;
+}
+.hero {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  min-width: 100vw;
+  background-image: url("images/zoom_v2.png");
+  background-position: center center;
+  background-repeat: no-repeat; 
+  background-attachment: local; 
+  background-size: cover; 
+  background-color: #464646; 
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.hero_up {
+  display: block;
+  font-family: My Gill Sans, Lato, sans-serif;
+  text-align: center;
+  font-weight: 900;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  position: relative;
+  top: 6vw;
+  left: 0vw;
+  font-size: 140%;
+}
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / -1; 
+  grid-row: 3;
+  background-color: #ffffff
+}
+.about-us {
+  max-width: 40%;
+  color: #1e3d58;
+  font-family: sans-serif,;
+  font-size: 75%;
+  margin-right: 30vw;
+}
+.contact-us {
+  max-width: 40%;
+  color: #1e3d58;
+  font-family: sans-serif,;
+  font-size: 75% ;
+}
+.contact-card {
+  font-size: 150%;
+}
+.hr {
+  color: #43b0f1;
+}
+.box {
+  color: #e8eef1;
+  }
+.footer { 
+    font-size: xx-small;
+  }

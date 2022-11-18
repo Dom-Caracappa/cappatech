@@ -1,0 +1,110 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.grid {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-rows: 1fr 2fr 1fr;
+}
+/* HEADER */
+.header {
+  display: flex;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  justify-content: center;
+  background-color: #e8eef1;
+
+
+}
+.logo-container {
+  max-height: max-content;
+  height: auto;
+  width: auto;
+  margin: 10px;
+}
+.CTlogo {
+  max-width: 30vw;
+  max-height: max-content;
+  height: auto;
+  }
+/* HERO */
+.hero {
+  display: flex;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  min-width: auto;
+  box-shadow: 10px;
+}
+#zoom {
+  object-fit: fill;
+  width: 100%;
+  position: relative;
+
+}
+#question {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-family: My Gill Sans, Lato, sans-serif;
+  text-shadow: 2px 3px #384958;
+  font-weight: 900;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  font-size: calc(24px + 2vw);
+  color:#e8eef1;
+  max-height: fit-content;
+  left: 50%;                        /* horizontal alignment */
+  top: 50%;                         /* vertical alignment */
+  transform: translate(-50%, -50%); 
+}
+.bottom {
+  display: flex;
+  grid-column: 1 / -1; 
+  grid-row: 3;
+  background-color: #e8eef1;
+  padding-top: 2vw; 
+}
+.about_us {
+  position: flex;
+  flex-wrap: wrap;
+}
+#about_us_title {
+  padding-left: 10vw;
+  color: #1e3d58 ;
+  font-variant: small-caps; 
+  font-size: 1.875em;
+  text-decoration-line: underline;
+  text-decoration-color: #43b0f1;
+  text-decoration-thickness: 15%;
+  line-height: 1.8;
+  padding-left: 10vw;
+}
+#about_us_text {
+  font-size: .8em;
+  text-align: justify;
+  padding-left: 10vw;
+  padding-right: 45vw;
+  color: #050505;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  width: 2fr;
+
+  
+}
+.contact-us {
+  max-width: 40%;
+  display: flex;
+  color: #1e3d58;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1em ;
+
+}
+.contact-card {
+  font-size: 150%;
+}
+
+
+.footer { 
+    font-size: xx-small;
+  }

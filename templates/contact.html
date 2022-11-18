@@ -1,0 +1,31 @@
+<!-- here we add our contact forms -->
+{% block content %}
+<div class="contact">
+    <h3>Contact us</h3>
+
+    <!-- Use "URL_for" to call the function get_contact
+        This function returns HTML for contact page -->
+
+        <form action="{{ url_for('get_contact') }}" method=post>
+            <div>
+                    <!-- name forms -->
+                    <p>
+                        {{ form.name.label }} <br>
+                        {{ form.name(placeholder='Your Name') }}
+                    </p>
+                    <!-- email forms -->
+                    <p>
+                        {{ form.email.label }} <br>
+                        {{ form.email(placeholder='Your Email') }}
+                    </p>
+                    <!-- content form -->
+                    <p>
+                        {{ form.content.label }} <br>
+                        {{ form.content(placeholder='How can we help you?') }}                    
+                    </p>
+                    <!-- submit button -->
+                        {{ form.submit }}
+            </div>
+        </form>
+</div>
+{% endblock %}

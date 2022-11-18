@@ -1,45 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {% block head %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="static/style.css"> 
     <title>
-        {% block title %}{% endblock %} 
+        CappaTech Consulting
     </title>
-    {% endblock %}
-</head>
-<body>   
-    <div class="grid"> 
-            <div class="logo-container"><a href="https://cappa.dev"><img class="CTlogo" src="static/images/logowtext.png"></a>
-    
-            </div>
-            <div class="box hero">
-                <p class="box hero_up">
-                    <span class="hero_up"> Where is your organization heading?</span>
-                </p>
-            </div>
-            <!-- <div class="box services"></div> -->
-            <div class="box bottom">
-                <div class="about-us">
-                    <span>CappaTech offers research, advisory, web development and business modernization services for organizations with challenges to solve.</span>
-                </div>
-                <div class="contact-us">
-                    <span class="contact-card">Contact Us</span>
-                    <br/><hr class="contact-line">
-                    <a href="mailto:info@cappa.tech"><span>info@cappa.tech</span></a>
-                </div>
-            </div>
-            <div class="footer">
-                &copy; Copyright 2022 CappaTech Consulting | All rights reserved
-            </div>
-         
-    </div>
-   
-</body>
-
-
-
-
-
+<main class="wrapper">
+    <section class="hero">
+        <div class="headline"><h1>Where is your organization heading next?</h1></div>
+        <article class="message">
+            <p>CappaTech offers research, advisory, web development and business modernization services for organizations with challenges to solve.</p>
+            <a href="#contact-us">Contact Us</a>
+        </article>
+    </section>
+</main>    
 </html>

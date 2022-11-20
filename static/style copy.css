@@ -6,52 +6,34 @@ html {
     text-rendering: optimizeLegibility;
     background-color: #1e3d58;
 }
-
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-
-  align-items: stretch;
-  
 }
-.grid > .top_row {
-  grid-row: 1;
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* z-index: 1; */
+.top_row {
   width: 100%;
   height: 5em;
-  background-color: #1e3d58;
-  opacity: .7;
-
-} 
-.grid > .top_row > .top_row_logo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  background-color: #e8eef1;
+  z-index: 1;
 }
-.grid > .top_row > .top_row_logo > img {
-  width: 100%;
-  height: 100%;
-  object-fit:contain;
-  opacity: 1.;
-}
-
-.grid > .headline {
-  grid-row: 1;
-  grid-column: 1 / -1;
+.hero {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   background: url(images/zoom_v2.png) center;
+  background-size: cover;
+}
+.hero > .headline {
+  flex: auto;
   color: #e8eef1;
   font-family: 'Poppins', sans-serif;
   font-size: 2.5rem;
+  
   text-align: center;
   text-shadow: 2px 2px #1e3d58;
   padding: 4rem 2rem;
 }
-/* Shape that contains the blerb and contact button */
-.grid > .box {
-  grid-column: 1 / -1;
+.box {
   display: flex;
   align-items: baseline;
   padding-left: 2.5em;
@@ -59,13 +41,14 @@ html {
   background-color: #1e3d58;
   max-height: fit-content;
 }
-.grid > .message > .blurb {
+/* .hero > .message {
+}  */
+.hero > .message > .blurb {
   font-size: 1.5rem;
   font-weight: 200;
   color: #e8eef1;
 }
-/* The contact button */
-.grid > .message > .link {
+.hero > .message > .link {
   align-self: center;
   padding: 1rem;
   background-color: #e8eef1;
@@ -76,9 +59,7 @@ html {
   display: inline-block;
   transition: all .3s;
 }
-.grid > .message > a:hover {
+.hero > .message > a:hover {
   opacity: .6;
 }
 
-/* .grid > .message {
-}  */

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+* {
+  box-sizing: border-box;
+
+
+ 
+
+}
+html {
+  margin: 0;  
+  height: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+  scroll-behavior: smooth;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: #1e3d58;
+  overflow-x: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "." "headline" "message" "footer";
+  grid-template-rows: auto 3fr auto;
+  align-items: stretch;
+  margin: auto;
+  min-height:100%;
+  
+  /* max-width: 900px; */
+}
+
+.grid > .top_row {
+  grid-row: 1;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  z-index: 1;
+  width: 110%;
+  height: 5em;
+  /* height: 6vh; */
+  background-color: #1e3d58;
+  /* opacity: .7; */
+
+} 
+.grid > .top_row > .top_row_logo {
+  background-image: url('images/logowtext_e8eef1.png');
+  background-size: 10em auto;
+
+  background-repeat: no-repeat;
+  
+  overflow-x: visible;
+  background-position: 5px calc(50% + 5px); 
+
+
+}
+.grid > .top_row > .top_row_logo > img {
+  box-shadow: 10px 10px black;
+
+}
+.grid > .headline {
+  grid-column: 1 / -1;
+  background: url(images/zoom_v2.png) center;
+  color: #e8eef1;
+  font-family: 'Poppins', sans-serif;
+  font-size: 5vw;
+  text-align: center;
+  text-shadow: 2px 2px #1e3d58;
+  padding: 4rem 2rem;
+  box-shadow: 10px 10px black;
+}
+
+/* Shape that contains the blerb and contact button */
+.grid > .box {
+  margin-top: 6vw;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: baseline;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  background-color: #1e3d58;
+  max-height: fit-content;
+  max-height: 20vh;
+}
+.grid > .message > .blurb {
+  font-size: 3vw;
+  font-weight: 200;
+  color: #e8eef1;
+  padding: auto;
+}
+/* The contact button */
+.grid > .message > .link {
+  align-self: center;
+  padding: 5vw;
+  margin-left: 4vw;
+  background-color: rgba(171, 185, 196, 100);
+  text-decoration:none;
+  color: #e8eef1;
+  border-radius: .25rem;
+  text-align: center;
+  font-size: 4vw;
+  font-weight: bold;
+  font-variant: small-caps;
+  box-shadow: 10px 10px black;
+  /* display: inline-block; */
+  transition: all .3s;
+}
+.grid > .message > a:hover {
+  opacity: .6;
+}
+
+.footer {
+  /* position: sticky; */
+  bottom: 0;
+  padding: auto;
+  height: 2.5rem;  
+  color: #e8eef1;   
+  margin-top: 8vh;       /* Footer height */
+}
+
+.copyright {
+  width: 100%;
+  font-size: 2vw;
+
+}

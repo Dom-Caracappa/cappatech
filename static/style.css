@@ -1,84 +1,338 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
-
-html {
-    scroll-behavior: smooth;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    background-color: #1e3d58;
+* {
+  box-sizing: border-box;
 }
-
+html {
+  margin: 0;
+  height: 100%;
+  padding: 0 2%;
+  scroll-behavior:smooth;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: #1e3d58;
+  overflow-x: hidden;
+}
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-
-  align-items: stretch;
-  
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 3fr auto auto;
 }
-.grid > .top_row {
+ .top_row {
   grid-row: 1;
   grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* z-index: 1; */
-  width: 100%;
-  height: 5em;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
   background-color: #1e3d58;
-  opacity: .7;
-
-} 
+}
 .grid > .top_row > .top_row_logo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  justify-self: center;
+  align-self: center;
 }
 .grid > .top_row > .top_row_logo > img {
-  width: 100%;
-  height: 100%;
-  object-fit:contain;
-  opacity: 1.;
+  max-width: 325px; 
+  display: block;
 }
-
 .grid > .headline {
-  grid-row: 1;
   grid-column: 1 / -1;
   background: url(images/zoom_v2.png) center;
   color: #e8eef1;
   font-family: 'Poppins', sans-serif;
-  font-size: 2.5rem;
+  font-size: 5vw;
   text-align: center;
   text-shadow: 2px 2px #1e3d58;
   padding: 4rem 2rem;
+  box-shadow: 10px 10px black;
 }
-/* Shape that contains the blerb and contact button */
-.grid > .box {
-  grid-column: 1 / -1;
+.message {
   display: flex;
-  align-items: baseline;
-  padding-left: 2.5em;
-  padding-right: 2.5em;
-  background-color: #1e3d58;
-  max-height: fit-content;
+  flex-direction: column;
+  text-align: center;
 }
-.grid > .message > .blurb {
-  font-size: 1.5rem;
+.message > p {
+  font-size: 6vw;
   font-weight: 200;
   color: #e8eef1;
+  padding: auto;
 }
-/* The contact button */
-.grid > .message > .link {
+ .message > .contact_section {
+  display: flex;
+  align-content: center;
   align-self: center;
-  padding: 1rem;
-  background-color: #e8eef1;
-  text-decoration:none;
-  color: #057dcd;
-  border-radius: .25rem;
-  text-align: center;
-  display: inline-block;
-  transition: all .3s;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-variant: small-caps;
+  height: 20vw;
+  width: 80vw;
+  background: #037dcc;
+  box-shadow: 10px 10px black;
+  
 }
-.grid > .message > a:hover {
-  opacity: .6;
+.contact_section > a {
+  font-size: 8vw;
+  color: #e8eef1;
+  padding-top: 2vw;
+}
+.footer {
+  position: relative;
+  bottom: 0;
+  padding-top: 5px;
+  width: 100%;
+  height: 20px;
+  color: #e8eef1;
+  font-size: 3vw;
+  margin-top: 2vh;
+}
+.copyright {
+  font-size: 2vw;
+  margin: auto;
 }
 
-/* .grid > .message {
-}  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 3fr auto auto;
+}
+ .top_row {
+  grid-row: 1;
+  grid-column: 1 / -1;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6vw;
+  max-width: 100%;
+  background-color: #1e3d58;
+}
+.grid > .top_row > .top_row_logo {
+  justify-self: center;
+  align-self: center;
+}
+.grid > .top_row > .top_row_logo > img {
+  display: block;
+  max-width: 260px;
+
+}
+.grid > .headline {
+  grid-column: 1 / -1;
+  background: url(images/zoom_v2.png) center;
+  color: #e8eef1;
+  font-family: 'Poppins', sans-serif;
+  font-size: 5vw;
+  text-align: center;
+  text-shadow: 2px 2px #1e3d58;
+  padding: 4rem 2rem;
+  box-shadow: 10px 10px black;
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.message > p {
+  font-size: 6vw;
+  font-weight: 200;
+  color: #e8eef1;
+  padding: auto;
+}
+ .message > .contact_section {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  font-variant: small-caps;
+  height: 20vw;
+  width: 80vw;
+  background: #037dcc;
+  box-shadow: 10px 10px black;
+  
+}
+.contact_section > a {
+  font-size: 8vw;
+  color: #e8eef1;
+  padding-top: 2vw;
+}
+.footer {
+  position: relative;
+  bottom: 0;
+  padding-top: 5px;
+  width: 100%;
+  height: 20px;
+  color: #e8eef1;
+  font-size: 3vw;
+  margin-top: 2vh;
+}
+.copyright {
+  font-size: 2vw;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* STARFLEET               STARFLEET                   STARFLEET                 STARFLEET
+
+
+XXXXXXXX              THE NEUTRAL ZONE      XXXXXXXX            THE NEUTRAL ZONE
+
+ROMULAN STAR EMPIRE                 ROMULAN STAR EMPIRE              ROMULAN STAR EMPIRE */
+
+
+/* TABLET SIZE */
+
+
+
+
+
+
+/* Desktop SIZE */
+/* @media screen and (min-width: 1000px) {
+
+  * {
+    box-sizing: border-box;
+  }
+  html {
+    margin: 0;
+    height: 100%;
+    padding: 0 2%;
+    scroll-behavior:smooth;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background-color: #1e3d58;
+    overflow-x: hidden;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1vw .5fr auto auto;
+  }
+  .grid > .top_row {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    display: flex;
+    z-index: 1;
+    height: 6vw;
+    max-width: 100%;
+    background-color: #1e3d58;
+  }
+  .grid > .top_row > .top_row_logo {
+    align-self: baseline;
+    margin-left: 2vw;
+  }
+  .grid > .top_row > .top_row_logo > img {
+    max-width: 290px;
+    display: block;
+  }
+  .grid > .headline {
+    display: flex;
+    grid-column: 1 / -1;
+    background: url(images/zoom_v2.png) center;
+    color: #e8eef1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4.5vw;
+    text-align: center;
+    text-shadow: 2px 2px #1e3d58;
+    margin-left: 1vw ;
+    margin-right: 1vw;
+    box-shadow: 10px 10px black;
+  }
+  .grid > .message {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    background-color: #1e3d58;
+    max-height: fit-content;
+    max-height: 20vh;
+  }
+ .message > .blurb {
+    font-size: 2.8vw;
+    font-weight: 200;
+    color: #e8eef1;
+    margin-right: 2vw;
+    padding-right: 6vw;
+    padding-left: 4vw;
+  }
+  .message > .contact_section {
+    align-self: center;
+    background: #037dcc;
+    box-shadow: 10px 10px black;
+    text-align: center;
+    height: 8vw;
+    width: 40vw;
+    padding-top: 1vw;
+  }
+
+  .message > a {
+    font-family: 'Poppins', sans-serif;
+    font-variant: small-caps;
+    font-size: 2vw;
+    color: #e8eef1;
+    margin: auto;
+    background-color: #037dcc;
+    box-shadow: 10px 10px black;
+   
+    
+  }
+  .footer {
+    position: relative;
+    bottom: 0;
+    padding-top: 5px;
+    width: 100%;
+    height: 20px;
+    color: #e8eef1;
+    font-size: 3vw;
+    margin-top: 2vh;
+  }
+  .copyright {
+    font-size: 2vw;
+    margin: auto;
+  }
+  
+  
+
+} */
